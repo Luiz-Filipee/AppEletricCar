@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">primeiroApp</string>
+    <string name="hello_dio">Ola mundo dio</string>
+    <string name="monkey">Macaco</string>
+    <string name="keyboard">Teclado</string>
+    <string name="dog">cachorro</string>
+    <string name="cat">gato</string>
+    <string name="shark">tubarao</string>
+</resources>

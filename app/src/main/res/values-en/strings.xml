@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">primeiroApp</string>
+    <string name="hello_dio">hello word Dio</string>
+    <string name="monkey">Monkey</string>
+    <string name="keyboard">keyboard</string>
+    <string name="dog">dog</string>
+    <string name="cat">cat</string>
+    <string name="shark">shark</string>
+</resources>
