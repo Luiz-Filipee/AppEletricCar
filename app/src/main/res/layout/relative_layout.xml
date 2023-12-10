@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:paddingRight="16dp">
 
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome" />
+
+
+    <EditText
+        android:id="@+id/sobrenome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nome"
+        android:hint="Sobrenome"/>
+
+    <TextView
+        android:id="@+id/cidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cidade: Araraquara"
+        android:layout_below="@id/sobrenome"/>
+
+    <TextView
+        android:id="@+id/gosto_musical"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cidade"
+        android:text="Gosto musical" />
+
+    <Spinner
+        android:id="@+id/spinner_sexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gosto_musical"
+        android:layout_centerInParent="true"
+        android:entries="@array/spinner_items" />
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_sexo"
+        android:text="Enviar" />
 </RelativeLayout>
+

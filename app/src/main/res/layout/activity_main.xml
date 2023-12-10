@@ -1,32 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
 
     <TextView
+        android:id="@+id/tv_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/hello_dio" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tv_Carros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/cat" />
+        android:layout_marginTop="16dp"
+        android:text="@string/carros"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titulo" />
 
     <TextView
+        android:id="@+id/tv_favoritos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/monkey" />
+        android:layout_marginStart="28dp"
+        android:text="@string/favoritos"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_Carros"
+        app:layout_constraintTop_toTopOf="@+id/tv_Carros" />
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/carro"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_titulo"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Carros"/>
+
+    <ImageView
+        android:id="@+id/iv_favoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/baseline_star_border_24"
+        app:layout_constraintStart_toEndOf="@+id/iv_image"
+        app:layout_constraintTop_toBottomOf="@+id/tv_favoritos" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_preco"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:text="@string/dog" />
+        android:text="@string/preco"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_image"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/tv_preco_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/shark" />
-</LinearLayout>
+        android:text="R$ 300.000,00"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_preco"
+        app:layout_constraintTop_toBottomOf="@+id/iv_image" />
+
+    <TextView
+        android:id="@+id/tv_bateria"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bateria"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_preco" />
+
+    <TextView
+        android:id="@+id/tv_bateria_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="300 kWh"
+        app:layout_constraintStart_toEndOf="@+id/tv_bateria"
+        app:layout_constraintTop_toTopOf="@id/tv_bateria"  />
+
+    <TextView
+        android:id="@+id/tv_potencia"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/potencia"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_bateria"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_potencia_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="300 cv"
+        app:layout_constraintStart_toEndOf="@+id/tv_potencia"
+        app:layout_constraintTop_toTopOf="@id/tv_potencia"  />
+
+    <TextView
+        android:id="@+id/tv_recarga"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/recarga"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_potencia"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_recarga_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="23 min"
+        app:layout_constraintStart_toEndOf="@+id/tv_recarga"
+        app:layout_constraintTop_toTopOf="@id/tv_recarga"  />
+
+    <TextView
+        android:id="@+id/tv_calcular_autonomia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/calcular_autonomia"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tv_recarga"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_preco_kwh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        android:layout_margin="16dp"
+        android:hint="@string/preco_kwh"
+        app:layout_constraintTop_toBottomOf="@id/tv_calcular_autonomia"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <EditText
+        android:id="@+id/et_km_percorrido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        android:layout_margin="16dp"
+        android:hint="@string/km_percorrido"
+        app:layout_constraintTop_toBottomOf="@id/et_preco_kwh"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_enviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/calcular"
+        android:textColor="@color/white"
+        android:background="@android:color/holo_purple"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/et_km_percorrido"
+        app:layout_constraintStart_toStartOf="@+id/et_km_percorrido"
+        app:layout_constraintEnd_toEndOf="@id/et_km_percorrido"/>
+
+
+    <RadioGroup
+        android:id="@+id/rg_comida_favorita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/btn_enviar"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enviar">
+
+        <RadioButton
+            android:id="@+id/rb_pizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pizza"/>
+
+        <RadioButton
+            android:id="@+id/rb_hamburguer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Hamburguer" />
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cb_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compromisso 1"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/rg_comida_favorita"
+        app:layout_constraintTop_toBottomOf="@+id/rg_comida_favorita"/>
+
+    <CheckBox
+        android:id="@+id/cb_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compromisso 2"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/rg_comida_favorita"
+        app:layout_constraintTop_toBottomOf="@+id/cb_1"/>
+
+    <Switch
+        android:id="@+id/s_lampada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ligar lampada?"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/cb_1"
+        app:layout_constraintTop_toBottomOf="@+id/cb_2"/>
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/result"
+        app:layout_constraintStart_toStartOf="@+id/rg_comida_favorita"
+        app:layout_constraintTop_toBottomOf="@+id/s_lampada" />
+
+    <TextView
+        android:id="@+id/tv_resultado_calculado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_resultado"
+        app:layout_constraintTop_toBottomOf="@id/btn_enviar"/>
+
+    <Spinner
+        android:id="@+id/sp_cidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/array_cidades"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/rg_comida_favorita"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultado"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

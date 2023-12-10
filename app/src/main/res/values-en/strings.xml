@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">primeiroApp</string>
-    <string name="hello_dio">hello word Dio</string>
-    <string name="monkey">Monkey</string>
-    <string name="keyboard">keyboard</string>
-    <string name="dog">dog</string>
-    <string name="cat">cat</string>
-    <string name="shark">shark</string>
+    <string name="app_name">Eletric Car</string>
+    <string name="preco">Price</string>
+    <string name="carros">Car</string>
+    <string name="favoritos">Favorites</string>
+    <string name="bateria">Batery</string>
+    <string name="potencia">Power</string>
+    <string name="recarga">Recharge</string>
+    <string name="search_carros">Search Car...</string>
+    <string name="preco_kwh">Price Kwh</string>
+    <string name="km_percorrido">Km percorrido</string>
+    <string name="calcular">Calculate</string>
+    <string name="result">Result R$</string>
+    <string name="calcular_autonomia">Calculate Autonomia</string>
 </resources>
